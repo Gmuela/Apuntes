@@ -1,0 +1,44 @@
+<html>
+    <body>
+    
+        name -> nombre del formulario
+        id -> identificador formulario
+        action -> Quien procesa los datos
+        method -> get o post
+        target -> _self "esta ventana" // _blank "otra ventana" // _parent "abre en el padre"
+
+        
+        <form name="miFormulario" id="" method="post o get" action="procesa.php" target="_blank" onsubmit="return miFuncion(*this)"/></form>
+        
+        *this -> Referencia a ESTE formulario
+
+        Métodos de Formulario:
+
+            miFormulario.submit() -> Confirma el formulario y envía la información
+            miFormulario.reset() -> Resetea el formulario
+
+    <input type="submit" value="Enviar"/>
+    
+        Eventos de Formulario:
+
+            onSubmit -> Al confirmar (exclusivo del formulario)
+            onReset -> Al resetear (exclusivo del formulario)
+    
+    --------------------------------------------------------------
+    
+    Propiedades de input text
+    
+    selectionStart -> Primer índice del texto seleccionado(en azul con ratón)
+    selectionEnd -> Último índice del texto seleccionado(en azul con ratón)
+    
+    Métodos input text
+    
+    miFormulario.miInput.focus() -> Da el focus a un input
+    miFormulario.miInput.select() -> Selecciona todo el contenido del texto
+    
+    Eventos
+    
+    onfocus / onblur / onselect
+    
+    </body>
+</html>
