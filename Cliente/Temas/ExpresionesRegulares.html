@@ -1,0 +1,64 @@
+<html>
+<body>
+
+    ^ -> Principio
+    
+    $ -> Fin
+    
+    * -> 0 o más veces
+    
+    + -> 1 o más veces
+    
+    ? -> 0 o 1 vez
+    
+    . -> Se espera un caracter individual menos salto de línea
+    
+    x | y -> Cualquier caracter puesto en X o Y es válido
+    
+    {n} -> El caracter tiene que aparecer exactamente n veces
+    {n,m} -> El caracter tiene que aparecer entre n a m veces
+    {n,} -> El caracter tiene que aparecer como mínimo n veces. De n hasta infinito
+    {,n} -> El caracter tiene que aparecer como mínimo n veces. De 0 hasta n
+    
+    [abcd] -> El caracter tiene que ser uno de los que aparecen entre corchetes. Variantes: [a-d] [0123] [0-3]
+    [^abcd] -> En este caso, ^ indica negación. Es decir, no se permiten los valores entre los corchetes
+    
+    <Ejemplo>
+
+        Ejemplo:
+        
+        [a-d]{4} -> 
+
+            Valores válidos: "aacd", "bbbd"
+            Valores inválidos: "eaab"(e caracter no válido), "aabbcc"(número de caracteres mayor de 4)
+    </Ejemplo>
+    
+    \d -> Cualquier caracter numérico(solo un dígito)
+    \D -> Cualquier caracter NO numérico
+    
+    \w -> Cualquier caracter alfanumérico incluyendo guión bajo(_)
+    \W -> Cualquier caracter no alfanumérico
+    
+    EXPRESION.test("Cadena") -> Método que evalúa la expresión y devuelve true o false
+    
+    <Ejemplo>
+        
+    Ejemplo:
+    
+        [a-z].test("hola") -> true
+        [a-z].test("Hola") -> false("H" no permitida)
+        
+        Tambien se le puede asignar una expresion a una variable:
+        
+        var expresion=/^\d{5}$/;
+        
+        var check=expresion.test(28514);
+        
+        la variable check es igual a true;
+        
+    </Ejemplo>
+    
+    
+    
+</body>
+</html>
